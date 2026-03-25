@@ -7,7 +7,7 @@ from emergency import findEmergency
 from wrong import detectWrongSide
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Ensure uploads directory exists
 os.makedirs("uploads", exist_ok=True)
